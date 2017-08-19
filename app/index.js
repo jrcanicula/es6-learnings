@@ -1,1 +1,12 @@
-console.log('Hello world from webpack with automatic update bleh');
+
+//block scoping
+
+
+let a = 'hello world';
+
+console.log(a); 
+
+{
+   let a = 'boom';
+   console.log('a inside scope',a);
+}
