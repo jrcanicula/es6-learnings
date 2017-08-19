@@ -1,14 +1,22 @@
+//let wizard = {magical : true,power : 10};
+
+//let magical = wizard.magical;
+//let power = wizard.power;
+
+//let {magical, power} = wizard;
+
+//console.log(magical,power);
 
 
-let fellowship = ["Harry","Hermione","Ron"];
+/*part 2*/
 
-let [pogi,ganda,ok] = fellowship;
+let magical = true;
+let power = 2;
 
-console.log(pogi,ganda,ok);
+console.log(magical,power);
 
+let ranger = {magical: false, power: 9};
 
-let numbers = [100,200,300,400,500];
+({magical,power} = ranger);
 
-let [a,...b] = numbers;
-
-console.log(a,b);
+console.log(magical,power);
