@@ -1,12 +1,9 @@
+// Constant in es6
+// > Enable protection for variables that must remain the same
+// > could actually improve performance/ caching
 
-//block scoping
+const a = [1,2,3,4];
+
+a.push(6);
 
 
-let a = 'hello world';
-
-console.log(a); 
-
-{
-   let a = 'boom';
-   console.log('a inside scope',a);
-}
