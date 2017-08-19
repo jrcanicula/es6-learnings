@@ -1,17 +1,14 @@
 
-function print(a,b,c){
 
-	console.log(a,b,c);
+let fellowship = ["Harry","Hermione","Ron"];
 
-}
+let [pogi,ganda,ok] = fellowship;
 
-function printtest(...z){
+console.log(pogi,ganda,ok);
 
-	console.log(...z);
 
-}
+let numbers = [100,200,300,400,500];
 
-let z = [1,2,3];
-print(...z)
+let [a,...b] = numbers;
 
-printtest(1,2,3);	
+console.log(a,b);
