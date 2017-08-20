@@ -1,34 +1,30 @@
 /*arrow function*/
 
-function blastoff(){
-	console.log('3...32....23...123.');
+
+//let points = [10,20,30,40,50];
+
+
+//let addOne = (element) => element + 1; 
+
+
+//points = points.map(addOne);
+
+
+//points = points.map((element)=>element + 1)
+
+//console.log(points);
+
+
+
+
+let isPassing  = (grade) => {
+	return grade >= 80;
 }
 
-
-
-const blastoffs = (b,c) => console.log(`i love pia ${b} haha, ${c}`,b,c);
-//blastoff();
-
-setTimeout(() => blastoffs('c','b'),1000);
-
-
-blastoffs('a','5');
-
-
-this.a  = 25;
-
-/*
-let print = function(){
-	this.a = 50;
-	console.log('this.a '.this.a);
-}
-
-print();
-
-*/ console.log('asd');
-
-console.log(this.a);
+let scores = [23,50,102,123,50];
  
-let arrowPrint  = () => console.log(this.a);
+//let passing  = scores.filter(isPassing);
 
-arrowPrint();
+let passing  = scores.filter(element => element >= 80);
+
+console.log(passing);
