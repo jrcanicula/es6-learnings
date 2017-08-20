@@ -1,22 +1,30 @@
-//let wizard = {magical : true,power : 10};
-
-//let magical = wizard.magical;
-//let power = wizard.power;
-
-//let {magical, power} = wizard;
-
-//console.log(magical,power);
+/*arrow function*/
 
 
-/*part 2*/
+//let points = [10,20,30,40,50];
 
-let magical = true;
-let power = 2;
 
-console.log(magical,power);
+//let addOne = (element) => element + 1; 
 
-let ranger = {magical: false, power: 9};
 
-({magical,power} = ranger);
+//points = points.map(addOne);
 
-console.log(magical,power);
+
+//points = points.map((element)=>element + 1)
+
+//console.log(points);
+
+
+
+
+let isPassing  = (grade) => {
+	return grade >= 80;
+}
+
+let scores = [23,50,102,123,50];
+ 
+//let passing  = scores.filter(isPassing);
+
+let passing  = scores.filter(element => element >= 80);
+
+console.log(passing);
