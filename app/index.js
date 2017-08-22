@@ -1,30 +1,41 @@
-/*arrow function*/
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
+// http://api.openweathermap.org/data/2.5/weather?APPID=${api_key}&q=${city}
+const api_key = '8ed066dab74f94bcc931774f0e5fab2c';
 
-//let points = [10,20,30,40,50];
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      city: 'San Francisco',
+      description: ''
+    }
+  }
 
+  componentDidMount() {
+    this.grabWeather(this.state.city);
+  }
 
-//let addOne = (element) => element + 1; 
+  grabWeather(city) {
+    // returns a string representing the current weather
+    fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${api_key}&q=${city}`)
+      .then(response => response.json())
+      .then(json => {
+        this.setState({description: json.weather[0].description});
+      });
+  }
 
-
-//points = points.map(addOne);
-
-
-//points = points.map((element)=>element + 1)
-
-//console.log(points);
-
-
-
-
-let isPassing  = (grade) => {
-	return grade >= 80;
+  render() {
+    return (
+      <div>
+        <h1>Weather Report for {this.state.city}!</h1>
+        <h2>{this.state.description}</h2>
+      </div>
+    )
+  }
 }
 
-let scores = [23,50,102,123,50];
- 
-//let passing  = scores.filter(isPassing);
-
-let passing  = scores.filter(element => element >= 80);
-
-console.log(passing);
+ReactDOM.render(
+  <App />, document.getElementById('root')
+)
